@@ -1,0 +1,1234 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import GmailIcon from "../components/icons/GmailIcon.astro";
+import Footer from "../components/Footer.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<Layout title="Cristian Godoy - Desarrollador Fullstack">
+  <main>
+    <header
+      class="w-full bg-gray-900 border-b border-gray-800 sticky top-0 z-50"
+    >
+      <div
+        class="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center"
+      >
+        <div
+          class="text-white font-bold text-xl md:text-2xl tracking-tight hover:text-accent transition-colors"
+        >
+          <a href="/">Portafolio</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white p-2 hover:text-accent transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg
+            id="close-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop navigation -->
+        <nav class="hidden md:flex gap-6">
+          <a
+            href="#inicio"
+            class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#proyectos"
+            class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+            >Proyectos</a
+          >
+          <a
+            href="#experiencia"
+            class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+            >Experiencia</a
+          >
+          <a
+            href="#contacto"
+            class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile navigation -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden flex-col gap-4 px-4 pb-4 bg-gray-900 border-t border-gray-800"
+      >
+        <a
+          href="#inicio"
+          class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+          >Inicio</a
+        >
+        <a
+          href="#proyectos"
+          class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+          >Proyectos</a
+        >
+        <a
+          href="#experiencia"
+          class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+          >Experiencia</a
+        >
+        <a
+          href="#contacto"
+          class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+          >Contacto</a
+        >
+      </nav>
+    </header>
+
+    <section
+      id="inicio"
+      class="w-full bg-gray-900 py-12 md:py-16 lg:py-20 border-b border-gray-200"
+    >
+      <div class="container mx-auto px-4 max-w-4xl text-center">
+        <img
+          src="/foto-perfil.jpg"
+          alt="Cristian Godoy Angel"
+          class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-6 shadow-xl border-4 border-white object-cover hover:scale-105 transition-transform duration-300"
+        />
+
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-accent mb-4 md:mb-6 tracking-tight px-2"
+        >
+          Cristian Godoy Angel
+        </h1>
+        <p
+          class="text-white text-lg sm:text-xl md:text-2xl text-gray-400 mt-4 md:mt-6 text-center px-4"
+        >
+          Desarrollador Fullstack, puedo detectar problemas y falencias en
+          flujos de trabajo, dar soluciones y crear sistemas robustos y
+          estéticos.
+        </p>
+
+        <div
+          class="flex justify-center flex-wrap gap-3 md:gap-4 mt-8 md:mt-10 px-4"
+        >
+          <a
+            href="https://linkedin.com/in/cristian-godoy-angel/"
+            target="_blank"
+            class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+          >
+            <LinkedinIcon class="w-4 h-4" />
+            <span class="text-base md:text-lg">Linkedin</span>
+          </a>
+
+          <a
+            href="https://github.com/cristiangodoyangel"
+            target="_blank"
+            class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+          >
+            <GithubIcon class="w-4 h-4" />
+            <span class="text-base md:text-lg">Github</span>
+          </a>
+
+          <a
+            href="mailto:cristian.godoy@example.com"
+            target="_blank"
+            class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+          >
+            <GmailIcon class="w-4 h-4" />
+            <span class="text-base md:text-lg">Email</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex justify-center"></div>
+    </section>
+
+    <section
+      id="proyectos"
+      class="container mx-auto max-w-7xl px-4 py-8 md:py-12 lg:py-16 bg-base-200"
+    >
+      <h3
+        class="text-accent text-2xl md:text-3xl font-bold tracking-tight leading-tight text-center mb-8 md:mb-12"
+      >
+        Mis Proyectos
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="card bg-gray-900 shadow-sm h-full rounded-lg">
+          <div class="hover-3d">
+            <figure>
+              <img src="/ecommerce.webp" alt="Ecommerce Image" />
+            </figure>
+            <div></div><div></div><div></div><div></div><div></div><div>
+            </div><div></div><div></div>
+          </div>
+
+          <div class="card-body py-6 px-4 md:py-8 md:px-8">
+            <h2
+              class="card-title text-2xl md:text-3xl font-bold text-white mb-2"
+            >
+              Sistema Ecommerce
+              <div class="badge badge-accent text-xs ml-2">FULLSTACK</div>
+            </h2>
+
+            <p class="text-white text-base md:text-lg mb-4 md:mb-6">
+              Una tienda tuvo que cerrar su local físico por fuerza mayor,
+              necesitaban migrar a una tienda digital completa, con pasarela de
+              pagos, sistema de inventario, alertas de stock y panel de
+              administración.<br />
+              Se desarrolló un sistema completo aplicando metodologías ágiles, conventional
+              commits, arquitectura desacoplada y escalable.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Django
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                React
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                DRF
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                MercadoPago
+              </div><div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                MySQL
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                TailwindCSS
+              </div>
+            </div>
+
+            <div
+              class="card-actions justify-end border-t border-gray-700 pt-6 mt-auto"
+            >
+              <a
+                href="https://github.com/cristiangodoyangel/Web-Ecommerce"
+                target="_blank"
+                class="btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                <GithubIcon class="w-5 h-5" />
+                Ver Código
+              </a>
+
+              <a
+                href="#"
+                data-video-url="https://youtu.be/k0SossPlINQ"
+                class="youtube-link btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 256 180"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <path
+                    d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+                  ></path>
+                  <path d="m102.421 128.06 66.328-38.418-66.328-38.418z"></path>
+                </svg>
+                Ver Video Explicativo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-gray-900 shadow-sm h-full rounded-lg">
+          <div class="hover-3d">
+            <figure>
+              <img src="/gestion.webp" alt="Auditoriapp Dashboard" />
+            </figure>
+            <div></div><div></div><div></div><div></div><div></div><div>
+            </div><div></div><div></div>
+          </div>
+
+          <div class="card-body py-6 px-4 md:py-8 md:px-8">
+            <h2
+              class="card-title text-2xl md:text-3xl font-bold text-white mb-2"
+            >
+              Auditoriapp
+              <div class="badge badge-accent text-xs ml-2">SAAS</div>
+            </h2>
+
+            <p class="text-white text-base md:text-lg mb-4 md:mb-6">
+              EL cliente tenía un gran problema, necesitaba auditar dineros
+              entregamos a beneficiarios, esos dineros debían ser rendidos, pero
+              los beneficiarios rendian a través de excel que no estaba
+              centralizado, otras veces con correos sueltos o simplemente no
+              hacían las rendiciones. <br />Desarrollé una plataforma SaaS
+              Multi-Tenant diseñada para auditar y gestionar fondos de proyectos
+              para múltiples entidades beneficiarias. Garantiza transparencia y
+              aislamiento de datos, todo en tiempo real.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Django
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                React
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Multi-Tenant
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                JWT
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                PostgreSQL
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Recharts
+              </div>
+            </div>
+
+            <div
+              class="card-actions justify-end border-t border-gray-700 pt-6 mt-auto"
+            >
+              <a
+                href="https://github.com/cristiangodoyangel/auditoriapp"
+                target="_blank"
+                class="btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                <GithubIcon class="w-5 h-5" />
+                Ver Código
+              </a>
+
+              <a
+                href="#"
+                data-video-url="https://youtu.be/71NUj6uAvRc"
+                class="youtube-link btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                Ver Video Explicativo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 256 180"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <path
+                    d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+                  ></path>
+                  <path d="m102.421 128.06 66.328-38.418-66.328-38.418z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-gray-900 shadow-sm h-full rounded-lg">
+          <div class="hover-3d">
+            <figure>
+              <img src="/cotizador.webp" alt="Sistema Cotizador Dashboard" />
+            </figure>
+            <div></div><div></div><div></div><div></div><div></div><div>
+            </div><div></div><div></div>
+          </div>
+
+          <div class="card-body py-6 px-4 md:py-8 md:px-8">
+            <h2
+              class="card-title text-2xl md:text-3xl font-bold text-white mb-2"
+            >
+              Sistema de Cotizaciones
+              <div class="badge badge-accent text-xs ml-2">B2B</div>
+            </h2>
+
+            <p class="text-white text-base md:text-lg mb-4 md:mb-6">
+              Cliente sin de control de sus cotizaciones a clientes, usaba un
+              excel que no tenía un correlativo, muchas veces por no estar en su
+              computador hacía las cotizaciones desde el celular pero con otro
+              formato básico, sin logo ni detalles de su empresa. se detectó
+              también que las cotizaciones que enviaba muchas diferían en los
+              precios siendo lso mismos servicios. <br />
+              Desarrollé una aplciación web donde en simples pasos puede hacer una
+              cotizacion, guardar el pdf, ver lista de cotizaciones anteriores y
+              base de datos de clientes.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Django
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                React
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                PostgreSQL
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                GCP
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                jsPDF
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Vercel
+              </div>
+            </div>
+
+            <div
+              class="card-actions justify-end border-t border-gray-700 pt-6 mt-auto"
+            >
+              <a
+                href="https://github.com/cristiangodoyangel/Cotizador"
+                target="_blank"
+                class="btn btn-ghost btn-outline btn-sm gap-2 text-white h over:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                <GithubIcon class="w-5 h-5" />
+                Ver Código
+              </a>
+
+              <a
+                href="#"
+                data-video-url="https://youtu.be/7XyHeOuqmoE"
+                class="youtube-link btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                Ver Video Explicativo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 256 180"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <path
+                    d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+                  ></path>
+                  <path d="m102.421 128.06 66.328-38.418-66.328-38.418z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-gray-900 shadow-sm h-full rounded-lg">
+          <div class="hover-3d">
+            <figure>
+              <img src="/taller.webp" alt="Control Taller Dashboard" />
+            </figure>
+            <div></div><div></div><div></div><div></div><div></div><div>
+            </div><div></div><div></div>
+          </div>
+
+          <div class="card-body py-6 px-4 md:py-8 md:px-8">
+            <h2
+              class="card-title text-2xl md:text-3xl font-bold text-white mb-2"
+            >
+              Gestión Taller Automotriz
+              <div class="badge badge-accent text-xs ml-2">DIGITALIZACIÓN</div>
+            </h2>
+
+            <p class="text-white text-base md:text-lg mb-4 md:mb-6">
+              Cliente de un taller tenía un sistema de ingreso al taller con
+              talonarios en físico, el cual tenía muchos inconvenientes: falta
+              de control total de clientes y detalles del vehiculo, al buscar la
+              ultima mantención de un vehículo podían demorar horas, muchas
+              veces se perdían los formularios.
+              <br />
+              Desarrollé una aplicación móvil para el ingreso de vehículos, eliminando
+              el uso de papel. Permite dibujar daños sobre el vehículo, capturar
+              firmas digitales, generar órdenes en PDF, consultar el historial de
+              servicios por patente y monitorización de vehículos en el taller y
+              su estado en tiempo real.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Django
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                React
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Canvas API
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                ReportLab
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                MySQL
+              </div>
+              <div
+                class="badge h-8 bg-accent text-secondary-content border-gray-900 font-bold"
+              >
+                Bootstrap
+              </div>
+            </div>
+
+            <div
+              class="card-actions justify-end border-t border-base-200 pt-6 mt-auto"
+            >
+              <a
+                href="https://github.com/cristiangodoyangel/TallerMecanico"
+                target="_blank"
+                class="btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent-content hover:bg-accent hover:border-accent"
+              >
+                <GithubIcon class="w-5 h-5" />
+                Ver Código
+              </a>
+
+              {
+                /* <a
+                href="#"
+                class="btn btn-ghost btn-outline btn-sm gap-2 text-white hover:text-accent -content hover:bg-accent hover:border-accent"
+              >
+                Ver Video Explicativo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 256 180"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="size-6"
+                >
+                  <path
+                    d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+                  ></path>
+                  <path d="m102.421 128.06 66.328-38.418-66.328-38.418z"></path>
+                </svg>
+              </a> */
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-8 md:gap-12 mt-8 md:mt-12 mb-8 md:mb-12">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
+          <div
+            class="p-4 md:p-6 rounded-2xl bg-gray-900 border border-white/10 hover:border-emerald-500/30 transition-colors"
+          >
+            <h4
+              class="text-lg md:text-xl font-bold text-white mb-3 md:mb-4 flex items-center gap-2"
+            >
+              <span class="text-emerald-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-server"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path
+                    d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"
+                  ></path><path
+                    d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"
+                  ></path><path d="M7 8l0 .01"></path><path d="M7 16l0 .01"
+                  ></path></svg
+                >
+              </span> Backend
+            </h4>
+            <ul class="space-y-2 text-gray-300 text-base md:text-lg">
+              <li>
+                <span class="text-white font-medium">Lenguajes:</span> Python, Java,
+                SQL
+              </li>
+              <li>
+                <span class="text-white font-medium">Frameworks:</span> Django, DRF,
+                Spring Boot
+              </li>
+              <li>
+                <span class="text-white font-medium">Base de Datos:</span> PostgreSQL,
+                MySQL
+              </li>
+              <li>
+                <span class="text-white font-medium">BaaS:</span> Supabase
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-gray-900 border border-white/10 hover:border-emerald-500/30 transition-colors"
+          >
+            <h4
+              class="text-xl font-bold text-white mb-4 flex items-center gap-2"
+            >
+              <span class="text-emerald-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-drops"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path
+                    d="M17.637 7.416a7.907 7.907 0 0 1 1.76 8.666a8 8 0 0 1 -7.397 4.918a8 8 0 0 1 -7.396 -4.918a7.907 7.907 0 0 1 1.759 -8.666l5.637 -5.416l5.637 5.416z"
+                  ></path><path
+                    d="M14.466 10.923a3.595 3.595 0 0 1 .77 3.877a3.5 3.5 0 0 1 -3.236 2.2a3.5 3.5 0 0 1 -3.236 -2.2a3.595 3.595 0 0 1 .77 -3.877l2.466 -2.423l2.466 2.423z"
+                  ></path></svg
+                >
+              </span> Frontend
+            </h4>
+            <ul class="space-y-2 text-gray-300 text-base md:text-lg">
+              <li>
+                <span class="text-white font-medium">Core:</span> Astro, React, JavaScript
+                (ES6+)
+              </li>
+              <li>
+                <span class="text-white font-medium">Estilos:</span> Tailwind CSS,
+                Bootstrap, MUI, DaisyUI
+              </li>
+              <li>
+                <span class="text-white font-medium">Estructura:</span> HTML5 semantic
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl bg-gray-900 border border-white/10 hover:border-emerald-500/30 transition-colors"
+          >
+            <h4
+              class="text-xl font-bold text-white mb-4 flex items-center gap-2"
+            >
+              <span class="text-emerald-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-cloud-bolt"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path
+                    d="M13 18.004h-6.343c-2.572 -.004 -4.657 -2.011 -4.657 -4.487c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.396 0 2.6 .831 3.148 2.03"
+                  ></path><path d="M19 16l-2 3h4l-2 3"></path></svg
+                >
+              </span> DevOps & Cloud
+            </h4>
+            <ul class="space-y-2 text-gray-300 text-base md:text-lg">
+              <li>
+                <span class="text-white font-medium">Contenedores:</span> Docker
+              </li>
+              <li>
+                <span class="text-white font-medium">CI/CD:</span> GitHub Actions,
+                Vercel
+              </li>
+              <li>
+                <span class="text-white font-medium">Cloud:</span> Google Cloud Platform,
+                Oracle Cloud (OCI), AWS
+              </li>
+              <li>
+                <span class="text-white font-medium">Deploy:</span> Railway, Vercel
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10 p-6 md:p-8"
+        >
+          <div
+            class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-emerald-500/20 blur-3xl rounded-full"
+          >
+          </div>
+
+          <h3
+            class="text-xl md:text-2xl font-bold text-accent mb-8 md:mb-12 text-center"
+          >
+            Cómo trabajo
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div class="flex gap-4">
+              <div
+                class="mt-1 bg-emerald-500/10 p-2 rounded-lg h-fit min-w-fit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-emerald-400"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M7 18l7 -7l-7 -7"></path><path
+                    d="M11 18l7 -7l-7 -7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-lg md:text-xl font-semibold text-white">
+                  Git Flow & Estándares
+                </h4>
+                <p
+                  class="text-gray-300 text-base md:text-lg leading-relaxed mt-1"
+                >
+                  Mantengo un historial limpio utilizando <strong
+                    >Conventional Commits</strong
+                  > (feat, fix, style). Me facilita la trazabilidad, el trabajo en
+                  equipo y la integración continua, además de hablarme a mi mismo
+                  del futoro: qué hice, cuando lo hice y por qué lo hice.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="mt-1 bg-emerald-500/10 p-2 rounded-lg h-fit min-w-fit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-emerald-400"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M3 7l9 6l9 -6"></path><path
+                    d="M3 17l9 6l9 -6"></path><path d="M3 7v10"></path><path
+                    d="M21 7v10"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-lg md:text-xl font-semibold text-white">
+                  Arquitectura Sólida
+                </h4>
+                <p
+                  class="text-gray-300 text-base md:text-lg leading-relaxed mt-1"
+                >
+                  Desarrollo pensando en la escalabilidad a futuro aplicando el
+                  patrón <strong>MVT</strong> en Django y creando <strong
+                    >APIs RESTful</strong
+                  > desacopladas, permitiendo que el Frontend consuma datos de manera
+                  eficiente y segura.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="mt-1 bg-emerald-500/10 p-2 rounded-lg h-fit min-w-fit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-emerald-400"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M9 12l2 2l4 -4"></path><path
+                    d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"
+                  ></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-lg md:text-xl font-semibold text-white">
+                  Calidad y Testing
+                </h4>
+                <p
+                  class="text-gray-300 text-base md:text-lg leading-relaxed mt-1"
+                >
+                  Implemento <strong>Pruebas Unitarias</strong> (Unit Testing) para
+                  asegurar que la lógica de negocio crítica funcione perfectamente
+                  antes de cada despliegue.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div
+                class="mt-1 bg-emerald-500/10 p-2 rounded-lg h-fit min-w-fit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-emerald-400"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                  ></path><path d="M12 3l-4 7h8l-4 7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-lg md:text-xl font-semibold text-white">
+                  Mentalidad Ágil
+                </h4>
+                <p
+                  class="text-gray-300 text-base md:text-lg leading-relaxed mt-1"
+                >
+                  Enfoque iterativo e incremental. Priorizo la entrega de valor
+                  constante mediante el desarrollo de MVPs funcionales y la
+                  adaptación rápida a nuevos requerimientos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Experience />
+
+    <section
+      id="contacto"
+      class="relative flex justify-center items-center px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 overflow-hidden bg-gray-900"
+    >
+      <div
+        id="wave-container"
+        class="absolute inset-0 overflow-hidden pointer-events-none z-[9999]"
+      >
+      </div>
+
+      <div class="relative w-full max-w-lg mx-4 md:mx-8 lg:m-20">
+        <div class="relative"></div>
+
+        <div class="text-center space-y-2">
+          <h3 class="text-xl md:text-2xl font-bold text-accent pb-4 md:pb-6">
+            Trabajemos Juntos
+          </h3>
+        </div>
+
+        <div class="w-full relative">
+          <button
+            id="copy-btn"
+            class="w-full flex items-center justify-between py-3 md:py-4 px-4 md:px-6 rounded-xl transition-all duration-200 relative overflow-hidden neu-button"
+          >
+            <span
+              class="font-mono text-neutral-300 text-sm md:text-lg truncate mr-4 z-10 pointer-events-none"
+              >cristiangodoyangel@gmail.com</span
+            >
+
+            <div
+              class="flex items-center gap-2 text-accent font-bold text-xs md:text-sm z-10 pointer-events-none"
+            >
+              <svg
+                id="btn-icon"
+                class="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <rect
+                  width="14"
+                  height="14"
+                  x="8"
+                  y="8"
+                  rx="2"
+                  ry="2"
+                  stroke-width="2"></rect><path
+                  d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                  stroke-width="2"></path>
+              </svg>
+              <span id="btn-text">Copiar</span>
+            </div>
+          </button>
+        </div>
+        <div class="flex justify-center flex-col gap-3 md:gap-4 mt-8 md:mt-10">
+          <a
+            href="https://linkedin.com/in/cristian-godoy-angel/"
+            target="_blank"
+            class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+          >
+            <LinkedinIcon class="w-4 h-4" />
+            <span class="text-base md:text-lg">Linkedin</span>
+          </a>
+
+          <a
+            href="https://github.com/cristiangodoyangel"
+            target="_blank"
+            class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+          >
+            <GithubIcon class="w-6 h-6" />
+            <span class="text-base md:text-lg">Github</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .neu-button {
+        --btn-bg: #171717;
+        --btn-shadow-light: rgba(194, 194, 194, 0.05);
+        --btn-shadow-dark: rgba(32, 87, 97, 0.8);
+
+        background-color: var(--btn-bg-gray-900);
+        border: 1px solid rgba(255, 15, 15, 0.05);
+        box-shadow:
+          6px 6px 12px var(--btn-shadow-dark),
+          -4px -4px 10px var(--btn-shadow-light);
+        z-index: 10;
+      }
+
+      .neu-button.clicked {
+        animation: btnSink 0.5s ease-out forwards;
+      }
+
+      @keyframes btnSink {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.98);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+
+    <style is:global>
+      .wave {
+        z-index: 50;
+        position: absolute;
+
+        border-radius: 0.75rem;
+
+        box-shadow:
+          0 0 20px #009689,
+          inset 0 0 20px #009689;
+
+        opacity: 0;
+        pointer-events: none;
+
+        animation:
+          fadeIn 0.2s ease-out forwards,
+          outside_grow 1.5s ease-out forwards,
+          fadeOut 1s 0.5s forwards;
+
+        transform: translate(-50%, -50%);
+        border-radius: 0.75rem;
+      }
+
+      @keyframes outside_grow {
+        from {
+          width: var(--start-w);
+          height: var(--start-h);
+        }
+        to {
+          width: calc(var(--start-w) + 500px);
+          height: calc(var(--start-h) + 500px);
+        }
+      }
+
+      @keyframes inside_grow {
+        from {
+          width: 0;
+          height: 0;
+        }
+        to {
+          width: calc(var(--start-w) + 480px);
+          height: calc(var(--start-h) + 480px);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+      if (mobileMenuBtn && mobileMenu && menuIcon && closeIcon) {
+        mobileMenuBtn.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.contains("hidden");
+
+          if (isHidden) {
+            mobileMenu.classList.remove("hidden");
+            mobileMenu.classList.add("flex");
+            menuIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          } else {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+            menuIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          }
+        });
+
+        // Close menu when clicking on a link
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            mobileMenu.classList.remove("flex");
+            menuIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          });
+        });
+      }
+
+      // Copy button functionality
+      const copyBtn = document.getElementById("copy-btn");
+      const btnText = document.getElementById("btn-text");
+      const waveContainer = document.getElementById("wave-container");
+
+      let isAnimating = false;
+
+      if (copyBtn && waveContainer && btnText) {
+        copyBtn.addEventListener("click", () => {
+          if (isAnimating) return;
+          isAnimating = true;
+
+          navigator.clipboard.writeText("cristiangodoyangel@gmail.com");
+
+          const originalText = btnText.innerText;
+          btnText.innerText = "¡Copiado!";
+          btnText.classList.add("text-white");
+          copyBtn.classList.add("clicked");
+
+          const btnRect = copyBtn.getBoundingClientRect();
+          const containerRect = waveContainer.getBoundingClientRect();
+
+          const x = btnRect.left + btnRect.width / 2 - containerRect.left;
+          const y = btnRect.top + btnRect.height / 2 - containerRect.top;
+
+          createWave(x, y, btnRect.width, btnRect.height);
+
+          setTimeout(() => {
+            copyBtn.classList.remove("clicked");
+            isAnimating = false;
+            setTimeout(() => {
+              btnText.innerText = originalText;
+              btnText.classList.remove("text-white");
+            }, 1000);
+          }, 400);
+        });
+      }
+
+      // @ts-ignore
+      function createWave(x, y, width, height) {
+        if (!waveContainer) return;
+
+        const wave = document.createElement("div");
+        wave.classList.add("wave");
+
+        wave.style.left = `${x}px`;
+        wave.style.top = `${y}px`;
+
+        wave.style.setProperty("--start-w", `${width}px`);
+        wave.style.setProperty("--start-h", `${height}px`);
+
+        waveContainer.appendChild(wave);
+
+        setTimeout(() => {
+          wave.remove();
+        }, 2000);
+      }
+    </script>
+
+    <!-- YouTube Modal -->
+    <div
+      id="youtube-modal"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="relative w-full max-w-5xl bg-gray-900 rounded-2xl shadow-2xl overflow-hidden"
+      >
+        <!-- Close button -->
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-red-600 hover:bg-red-700 text-white rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+          aria-label="Cerrar modal"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <!-- Video container -->
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            id="youtube-iframe"
+            class="absolute top-0 left-0 w-full h-full"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      // YouTube Modal functionality
+      const modal = document.getElementById("youtube-modal");
+      const iframe = document.getElementById("youtube-iframe");
+      const closeBtn = document.getElementById("close-modal");
+      const youtubeLinks = document.querySelectorAll(".youtube-link");
+
+      // Open modal with video
+      youtubeLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const videoUrl = link.getAttribute("data-video-url");
+          // Convert YouTube URL to embed URL
+          const videoId = videoUrl.split("/").pop();
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      // Close modal
+      function closeModal() {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        iframe.src = "";
+        document.body.style.overflow = "auto";
+      }
+
+      closeBtn.addEventListener("click", closeModal);
+
+      // Close modal when clicking outside
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+          closeModal();
+        }
+      });
+    </script>
+  </main>
+  <Footer />
+</Layout>
