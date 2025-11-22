@@ -7,7 +7,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
 
 <section
   id="contacto"
-  class="relative flex justify-center items-center px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 overflow-hidden bg-base-200"
+  class="relative flex justify-center items-center px-4 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20 overflow-hidden bg-gray-200"
 >
   <div
     id="wave-container"
@@ -24,13 +24,13 @@ import Curriculum from "../components/icons/Curriculum.astro";
       </h3>
     </div>
 
-    <div class="w-full relative">
+    <div class="w-full relative bg-gray-300 rounded-xl">
       <button
         id="copy-btn"
         class="w-full flex items-center justify-between py-3 md:py-4 px-4 md:px-6 rounded-xl transition-all duration-200 relative overflow-hidden neu-button"
       >
         <span
-          class="font-mono text-gray-900 text-sm md:text-lg truncate mr-4 z-10 pointer-events-none"
+          class="font-mono text-gray-900 text-sm md:text-lg font-bold truncate mr-4 z-10 pointer-events-none"
           >cristiangodoyangel@gmail.com</span
         >
 
@@ -64,7 +64,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
       <a
         href="https://linkedin.com/in/cristian-godoy-angel/"
         target="_blank"
-        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300 hover:border-l-12 hover:border-l-accent"
       >
         <LinkedinIcon class="w-4 h-4" />
         <span class="text-base md:text-lg">Linkedin</span>
@@ -73,7 +73,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
       <a
         href="https://github.com/cristiangodoyangel"
         target="_blank"
-        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300 hover:border-l-12 hover:border-l-accent"
       >
         <GithubIcon class="w-6 h-6" />
         <span class="text-base md:text-lg">Github</span>
@@ -82,7 +82,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
       <a
         href="/CV_CristianGodoy_fullstack.pdf"
         target="_blank"
-        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300"
+        class="btn btn-accent btn-sm md:btn-md inline-flex flex-row items-center gap-2 hover:bg-black hover:text-white hover:scale-105 transition duration-300 hover:border-l-12 hover:border-l-accent"
       >
         <Curriculum class="w-6 h-6" />
         <span class="text-base md:text-lg">Descargar CV</span>
@@ -130,7 +130,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
     border-radius: 0.75rem;
 
     box-shadow:
-      0 0 20px #cacaca,
+      0 0 20px #838383,
       inset 0 0 20px #027579;
 
     opacity: 0;
@@ -235,7 +235,7 @@ import Curriculum from "../components/icons/Curriculum.astro";
 
       const originalText = btnText.innerText;
       btnText.innerText = "¡Copiado!";
-      btnText.classList.add("text-white");
+      btnText.classList.add("text-accent");
       copyBtn.classList.add("clicked");
 
       const btnRect = copyBtn.getBoundingClientRect();
