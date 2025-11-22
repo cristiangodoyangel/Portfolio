@@ -6,23 +6,43 @@ import "../styles/global.css";
 
 export interface Props {
   title: string;
+  description?: string;
+  image?: string;
 }
-const { title } = Astro.props;
+
+// Definimos valores por defecto
+const {
+  title,
+  description = "Portafolio de Cristian Godoy - Desarrollador Fullstack. Soluciones digitales, Python y React desde Antofagasta.",
+  image = "/preview.webp",
+} = Astro.props;
 ---
 
 <html lang="es" data-theme="corporate">
-  <!-- light, dark, cupcake, bumblebee, emerald, corporate, 
-   synthwave, retro, cyberpunk, valentine, halloween, garden, 
-   forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, 
-   dracula, cmyk, autumn, business, acid, lemonade, night, coffee, 
-   winter, dim, nord, sunset, caramellatte, abyss, silk -->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Cristian Godoy Angel" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
   </head>
+
   <body class="bg-base-200 text-base-content min-h-screen">
     <slot />
   </body>
