@@ -1,0 +1,97 @@
+<header class="w-full bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+  <div
+    class="container mx-auto max-w-7xl px-4 py-4 flex justify-between items-center"
+  >
+    <div
+      class="text-white font-bold text-xl md:text-2xl tracking-tight hover:text-accent transition-colors"
+    >
+      <a href="/">
+        <img src="/logo.png" class="w-24 h-auto" alt="Cristian Godoy Angel" />
+      </a>
+    </div>
+
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden text-white p-2 hover:text-accent transition-colors"
+      aria-label="Toggle menu"
+    >
+      <svg
+        id="menu-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        id="close-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 hidden"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <nav class="hidden md:flex gap-6">
+      <a
+        href="#inicio"
+        class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+        >Inicio</a
+      >
+      <a
+        href="#proyectos"
+        class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+        >Proyectos</a
+      >
+      <a
+        href="#experiencia"
+        class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+        >Experiencia</a
+      >
+      <a
+        href="#contacto"
+        class="text-gray-300 text-lg font-medium hover:text-accent transition-colors"
+        >Contacto</a
+      >
+    </nav>
+  </div>
+
+  <nav
+    id="mobile-menu"
+    class="md:hidden hidden flex-col gap-4 px-4 pb-4 bg-gray-900 border-t border-gray-800"
+  >
+    <a
+      href="#inicio"
+      class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+      >Inicio</a
+    >
+    <a
+      href="#proyectos"
+      class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+      >Proyectos</a
+    >
+    <a
+      href="#experiencia"
+      class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+      >Experiencia</a
+    >
+    <a
+      href="#contacto"
+      class="mobile-menu-link text-gray-300 text-lg font-medium hover:text-accent transition-colors py-2"
+      >Contacto</a
+    >
+  </nav>
+</header>
