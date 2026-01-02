@@ -329,8 +329,8 @@ import GithubIcon from "./icons/GithubIcon.astro";
           <br />
           Desarrollé una aplicación móvil para el ingreso de vehículos, eliminando
           el uso de papel. Permite dibujar daños sobre el vehículo, capturar firmas
-          digitales, generar órdenes en PDF, consultar el historial de servicios
-          por patente y monitorización de vehículos en el taller y su estado en tiempo
+          digitales, generar órdenes en PDF, consultar el historial de servicios por
+          patente y monitorización de vehículos en el taller y su estado en tiempo
           real.
         </p>
 
@@ -497,3 +497,11 @@ import GithubIcon from "./icons/GithubIcon.astro";
     }
   });
 </script>
+
+<style>
+  @media (max-width: 1024px) {
+    .hover-3d div:not(:first-child) {
+      display: none;
+    }
+  }
+</style>
